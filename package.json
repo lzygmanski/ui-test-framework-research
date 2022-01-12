@@ -15,7 +15,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cypress": "$(npm bin)/cypress",
+    "cypress:open": "yarn run cypress open",
+    "eject": "react-scripts eject",
+    "wdio": "wdio run ./test/wdio.conf.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +37,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wdio/cli": "^7.16.13",
+    "@wdio/local-runner": "^7.16.13",
+    "@wdio/mocha-framework": "^7.16.13",
+    "@wdio/spec-reporter": "^7.16.13",
+    "chromedriver": "^97.0.0",
+    "cypress": "^9.2.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "wdio-chromedriver-service": "^7.2.6",
+    "wdio-wait-for": "^2.2.1"
   }
 }
